@@ -1,0 +1,5 @@
+.table_users{
+    height: 100vh;
+    display: flex;
+    align-content: center;
+}

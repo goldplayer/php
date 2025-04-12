@@ -1,5 +1,5 @@
 <?php require_once 'db.php' ?>
-
+<?php  require_once 'get_users.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,36 @@
 <body>
 
 <!-- ========== Start Section ========== -->
+    <section class="table_users">
+        <div class="container">
+            <div class="row">
+                <table class="get_users table">
+                    <thead class="table_header">
+                    <tr>
+                        <th class="table_header_element">Id</th>
+                        <th class="table_header_element">FIO</th>
+                        <th class="table_header_element">username</th>
+                        <th class="table_header_element">email</th>
+                        <th class="table_header_element">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table_body_users">
+                    <?php  foreach ($users as $user): ?>
+                        <tr>
+                            <td class="table_body_elem"><?= htmlspecialchars($user['id'])?></td>
+                            <td class="table_body_elem"><?= htmlspecialchars($user['fio'])?></td>
+                            <td class="table_body_elem"><?= htmlspecialchars($user['username'])?></td>
+                            <td class="table_body_elem"><?= htmlspecialchars($user['email'])?></td>
+                            <td class="table_body_elem">
 
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 <!-- ========== End Section ========== -->
 
 
